@@ -1,0 +1,58 @@
+.image1 {
+    width: 420px;
+    z-index: 4;
+    position: absolute;
+    top: 34%;
+    left: 56%;
+    transition: all 0.35s ease;
+}
+
+.image1:hover {
+    transform: translateY(-20px);
+}
+
+.image2 {
+    width: 850px;
+    z-index: 3;
+    position: absolute;
+    top: 37%;
+    left: 20%;
+    transition: all 0.5s ease;
+}
+
+.image2:hover {
+    transform: translateY(-10px) scale(1.08);
+}
+
+.image3 {
+    width: 550px;
+    z-index: 2;
+    position: absolute;
+    top: 11%;
+    left: 24%;
+    transition: all 2s ease;
+}
+
+.image3:hover {
+    transform: rotate(220deg) scale(1.17);
+    z-index: 4;
+}
+
+.image4 { 
+    width: 850px;
+    z-index: 1; 
+    position: absolute;
+    top: 3.5%;
+    left: 28%;
+    transition: all 1s ease;
+}
+
+.image4:hover {
+    transform: scaleX(1.7);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
