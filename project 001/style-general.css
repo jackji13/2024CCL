@@ -1,4 +1,10 @@
 body {
+    min-height: 100vh;
+    font-family: 'Times New Roman';
+    overflow-x: hidden;
+}
+
+h1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,6 +21,7 @@ body {
     font-size: 55pt;
     text-decoration: none;
     font-style: italic;
+    position: fixed;
     transform: scaleY(2.7);
     transition: all 0.3s ease;
     animation: maintitleMove 1.7s ease;
@@ -24,11 +31,11 @@ body {
     from {
         transform: translateY(-550px) scaleY(1);
         opacity: 0;
-        letter-spacing: 100px;
+        letter-spacing: 150px;
     }
 
     to {
-        transform: translateY(0px) scaleY(2.7);
+        transform: translateY(0) scaleY(2.7);
         opacity: 1;
         letter-spacing: 0px;
     }
@@ -52,7 +59,7 @@ body {
     font-style: italic;
     transition: all 0.3s ease;
     position: fixed;
-    animation: smalltitleMove 1.7s ease;
+    animation: smalltitleMove 1.7s ease both;
 }
 
 @keyframes smalltitleMove {
@@ -60,14 +67,12 @@ body {
         transform: translateX(200px) scaleY(1);
         letter-spacing: 20px;
         opacity: 0;
-
     }
 
     to {
         transform: translateX(0px) scaleY(2.7);
         letter-spacing: 0px;
         opacity: 1;
-
     }
 }
 
@@ -77,14 +82,162 @@ body {
     color: white;
 }
 
-p {
-    margin-top: 40px;
+.timer {
+    top: 0;
+    left: 56%;
+    z-index: -1;
+    display: inline-block;
+    color: black;
+    font-size: 20pt;
+    text-decoration: none;
+    font-style: italic;
+    position: fixed;
+}
+
+.timerLocation {
+    top: 4%;
+    left: 93.5%;
+    z-index: -1;
+    display: inline-block;
+    color: black;
+    font-size: 18pt;
+    text-decoration: none;
+    font-style: italic;
+    position: fixed;
+    transform: scaleY(2.7);
+    animation: smalltimerMove 1.7s ease both;
+}
+
+@keyframes smalltimerMove {
+    from {
+        transform: translateX(-200px) scaleY(1);
+        letter-spacing: 20px;
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px) scaleY(2.7);
+        letter-spacing: 0px;
+        opacity: 1;
+    }
+}
+
+.timerAnimation {
+    animation: timerMove 3.4s ease-in-out infinite;
+}
+
+@keyframes timerMove {
+    0% {
+        transform: translateY(-60px) scaleY(1);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(56vh) scaleY(2.7);
+        opacity: 1;
+    }
+    70% {
+        transform: translateY(56vh) scaleY(2.7);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) scaleY(1);
+        opacity: 0;
+    }
+}
+
+.p1 {
+    margin-top: 55px;
     position: relative;
-    top: 780px;
+    top: -15px;
     text-align: center;
     font-size: 18pt;
-    transform: scaleY(2.7);
     font-style: italic;
+}
+
+.p2 {
+    margin-top: 55px;
+    position: relative;
+    top: -42px;
+    text-align: center;
+    font-size: 18pt;
+    font-style: italic;
+}
+
+.p3 {
+    margin-top: 55px;
+    position: relative;
+    top: -52px;
+    text-align: center;
+    font-size: 18pt;
+    font-style: italic;
+}
+
+.p4 {
+    margin-top: 55px;
+    position: relative;
+    top: -15px;
+    text-align: center;
+    font-size: 18pt;
+    font-style: italic;
+}
+
+.p5 {
+    margin-top: 55px;
+    position: relative;
+    top: -20px;
+    text-align: center;
+    font-size: 18pt;
+    font-style: italic;
+}
+
+
+.ascii1 {
+    position: absolute;
+    top: -350px;
+    left: 45px;
+    animation: ascii 4.8s linear 0.8s infinite;
+}
+.ascii2 {
+    position: absolute;
+    top: -350px;
+    left: -45px;
+    animation: ascii 4.8s linear 1.6s infinite;
+}
+.ascii3 {
+    position: absolute;
+    top: -350px;
+    left: 45px;
+    animation: ascii 4.8s linear 2.4s infinite;
+}
+.ascii4 {
+    position: absolute;
+    top: -350px;
+    left: -45px;
+    animation: ascii 4.8s linear 3.2s infinite;
+}
+.ascii5 {
+    position: absolute;
+    top: -350px;
+    left: 45px;
+    animation: ascii 4.8s linear 4s infinite;
+}
+.ascii6 {
+    position: absolute;
+    top: -350px;
+    left: -45px;
+    animation: ascii 4.8s linear 4.8s infinite;
+}
+@keyframes ascii {
+    0% {
+        transform: translateY(-250px);
+    }
+    100% {
+        transform: translateY(140vh);
+    }
+}
+
+.notinteractive {
+    pointer-events: none;
 }
 
 .invisible {
@@ -93,7 +246,7 @@ p {
 
 .hidden {
     opacity: 0;
-    filter: blur(5px);
+    filter: blur(7px);
     transform: translateX(-100%);
-    transition: all 1s ease;
+    transition: all 0.8s ease;
 }

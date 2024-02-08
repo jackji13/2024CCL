@@ -51,8 +51,275 @@
     transform: scaleX(1.7);
 }
 
+.image5 {
+    width: 400px;
+    z-index: 5;
+    position: absolute;
+    top: 46%;
+    left: 49.5%;
+    transition: all 0.6s ease;
+}
+
+.image5:hover {
+    transform: translateY(-20px) scale(1.3);
+}
+
+.image6 {
+    width: 680px;
+    z-index: 4;
+    position: absolute;
+    top: 53%;
+    left: 14%;
+    transition: all 1s ease;
+}
+
+.image6:hover {
+    transform: translateX(230px);
+    filter: hue-rotate(-50deg);
+}
+
+.image7 {
+    width: 850px;
+    z-index: 3;
+    position: absolute;
+    top: 43%;
+    left: 29%;
+    transition: all 0.35s ease;
+}
+
+.image7:hover {
+    transform: translateY(-20px);
+}
+
+.image8 {
+    width: 460px;
+    z-index: 2;
+    position: absolute;
+    top: 24%;
+    left: 47%;
+    transition: all 0.7s ease;
+}
+
+.image8:hover {
+    transform: translateY(-170px) scaleY(1.3);
+}
+
+.image9 {
+    width: 850px;
+    z-index: 1; 
+    position: absolute;
+    top: 3.5%;
+    left: 23%;
+    transition: all 0.35s ease;
+}
+
+.image9:hover {
+    transform: translateY(-20px);
+}
+
+.image10 {
+    width: 320px;
+    z-index: 5;
+    position: absolute;
+    top: 48%;
+    left: 50.8%;
+    transition: all 1s ease;
+}
+
+.image10:hover {
+    transform: translateY(-30px) rotateX(-30deg) rotateY(-160deg);
+}
+
+.image11 {
+    width: 620px;
+    z-index: 4;
+    position: absolute;
+    top: 23%;
+    left: 41%;
+    transition: all 0.35s ease;
+}
+
+.image11:hover {
+    transform: translateY(-20px);
+}
+
+.image12 {
+    width: 420px;
+    z-index: 2;
+    position: absolute;
+    top: 45%;
+    left: 28%;
+    transition: all 0.35s ease;
+}
+
+.image12:hover {
+    transform: scale(1.1);
+}
+
+.image13 {
+    width: 790px;
+    z-index: 3; 
+    position: absolute;
+    top: 17%;
+    left: 25%;
+    transition: all 1s ease;
+}
+
+.image13:hover {
+    transform: translateY(-20px);
+}
+
+.image14 {
+    width: 850px;
+    z-index: 1; 
+    position: absolute;
+    top: 3.5%;
+    left: 32%;
+    transition: all 1s ease;
+}
+
+.image14:hover {
+    transform: scale(1.2);
+    filter:hue-rotate(90deg);
+}
+
+.image15 {
+    width: 520px;
+    z-index: 5;
+    position: absolute;
+    top: 51%;
+    left: 36%;
+    transition: all 0.35s ease;
+}
+
+.image15:hover {
+    transform: translateY(-40px);
+    filter: invert(100%);
+}
+
+.image16 {
+    width: 720px;
+    z-index: 4;
+    position: absolute;
+    top: 34%;
+    left: 43%;
+    transition: all 0.35s ease;
+}
+
+.image16:hover {
+    transform: translateY(-20px);
+    z-index: 6;
+}
+
+.image17 {
+    width: 930px;
+    z-index: 3;
+    position: absolute;
+    top: 47%;
+    left: 33%;
+    transition: all 0.35s ease;
+}
+
+.image17:hover {
+    transform: translateY(-20px);
+}
+
+.image18 {
+    width: 640px;
+    z-index: 2;
+    position: absolute;
+    top: 27%;
+    left: 28%;
+    transition: all 1s ease;
+}
+
+.image18:hover {
+    transform: translateY(-190px) scale(1.2);
+}
+
+.image19 {
+    width: 850px;
+    z-index: 1; 
+    position: absolute;
+    top: 12.5%;
+    left: 23%;
+    transition: all 1s ease;
+}
+
+.image19:hover {
+    transform: translateX(80px) translateY(-50px) scaleX(1.3);
+}
+
+.image20 {
+    width: 60px;
+    z-index: 5;
+    position: absolute;
+    top: 64%;
+    left: 29%;
+    transition: all 0.35s ease;
+}
+
+.image20:hover {
+    transform: translateY(-20px);
+}
+
+.image21 {
+    width: 850px;
+    z-index: 4; 
+    position: absolute;
+    top: 36%;
+    left: 25%;
+    transition: all 0.4s ease;
+}
+
+.image21:hover {
+    transform: translateY(-20px);
+}
+
+.image22 {
+    width: 543.2px;
+    z-index: 3;
+    position: absolute;
+    top: 54%;
+    left: 27.8%;
+    transition: all 1.5s ease;
+}
+
+.image22:hover {
+    transform: translateY(-120px) scale(1.7);
+}
+
+.image23 {
+    width: 850px;
+    z-index: 2; 
+    position: absolute;
+    top: 16%;
+    left: 30%;
+    transition: all 0.35s ease;
+}
+
+.image23:hover {
+    transform: translateY(-50px);
+
+}
+
+.image24 {
+    width: 850px;
+    z-index: 1; 
+    position: absolute;
+    top: 3.5%;
+    left: 33%;
+    transition: all 1s ease;
+}
+
+.image24:hover {
+    transform: translateY(90px) scaleX(1.3);
+    filter: blur(7px);
+}
+
 .show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
 }
+
