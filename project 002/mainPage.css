@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    font-family: "Times New Roman";
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.ascii-art {
+    font-size: 12pt;
+    line-height: 17px;
+    letter-spacing: 0px;
+    color: black;
+    transition: all 0.5s ease;
+    animation: ascii-art 2s ease;
+}
+
+.ascii-art:hover {
+    font-size: 23pt;
+    font-weight: bold;
+    line-height: 22px;
+    letter-spacing: -6px;
+    color: rgb(255, 217, 0);
+}
+
+@keyframes ascii-art {
+    0% {
+        transform: scale(5);
+        opacity: 0;
+        font-size: 100pt;
+        letter-spacing: -50px;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        font-size: 12pt;
+        letter-spacing: 0px;
+    }
+}

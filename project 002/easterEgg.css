@@ -1,0 +1,89 @@
+body {
+    font-family: "Times New Roman";
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.ascii-art1 {
+    position: fixed;
+    top: -15px;
+    left: 15px;
+    font-size: 10pt;
+    line-height: 13px;
+    letter-spacing: 0px;
+    z-index: 101;
+    color: black;
+    transition: all 0.2s ease;
+    animation: ascii-art 1.6s ease;
+}
+
+.ascii-art1:hover {
+    transform: scale(1.3);
+    font-weight: bold;
+    color: rgb(255, 217, 0);
+}
+
+@keyframes ascii-art {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+        letter-spacing: 50px;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        letter-spacing: 0px;
+    }
+}
+
+.ascii-title {
+    position: fixed;
+    top: 10px;
+    font-size: 8pt;
+    letter-spacing: 0px;
+    color: black;
+    z-index: 100;
+    transition: all 0.15s ease;
+    animation: ascii-title 1.6s ease;
+}
+
+.ascii-title:hover {
+    transform: scale(1.25);
+    font-weight: bold;
+    color: rgb(255, 217, 0);
+}
+
+@keyframes ascii-title {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+        letter-spacing: 60px;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        letter-spacing: 0px;
+    }
+}
+
+.ascii-art {
+    font-size: 10pt;
+    position: absolute;
+    white-space: pre;
+    font-family: monospace;
+    user-select: none;
+    transition: font-size 0.25s ease;
+}
+
+.ascii-art:hover {
+    font-size: 13pt;
+    color: rgb(255, 217, 0);
+}
