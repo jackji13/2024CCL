@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENCRYPTER</title>
+    <link rel="stylesheet" href="encryptPage.css">
+    <link rel="icon" href="assets/icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    <script defer src="encrypt.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="textboxes">
+
+            <div class="input">
+                <textarea id="textInput" placeholder="Type your text here to encrypt"></textarea>
+            </div>
+
+            <div class="buttons">
+                <button id="textToImageBtn">Encrypt</button>
+                <button id="downloadImageBtn">Download</button>
+                <label for="imageInput" class="button">Upload</label>
+                <input type="file" id="imageInput" accept="image/png">
+                <button id="decodeImageBtn">Decrypt</button>
+            </div>
+
+            <div class="output">
+                <textarea id="decodedText" placeholder="Decrypted text will appear here" readonly></textarea>
+            </div>
+
+        </div>
+
+        <div class="imgArea">
+            <canvas id="imageCanvas"></canvas>
+        </div>
+
+    </div>
+
+    <div class="return-home">
+        <a href="index.html" class="homeBtn">Home</a>
+    </div>    
+
+</body>
+</html>

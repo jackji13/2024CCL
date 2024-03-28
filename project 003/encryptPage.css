@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Nanum Gothic Coding", monospace;
+    font-weight: 400;
+    background-color: black;
+    overflow: hidden;
+}
+
+.container {
+    width: 60%;
+    max-width: 1200px;
+    height: 700px;
+    /* background-color: blue; */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.textboxes, .imgArea {
+    margin: 10px;
+}
+
+textarea {
+    resize: none;
+}
+
+.input textarea {
+    position: relative;
+    z-index: 10;
+    width: 122%;
+    height: 325px;
+    font-size: 12pt;
+    border: 0px solid #000;
+    color: #17f700;
+    background-color: black;
+}
+.output textarea {
+    position: relative;
+    z-index: 10;
+    width: 122%;
+    height: 325px;
+    font-size: 12pt;
+    border: 0px solid #000;
+    color: rgb(162, 162, 162);
+    background-color: black;
+}
+
+textarea:focus, input[type="text"]:focus {
+    background-color: #202020;
+    outline: none;
+    color: #17f700;
+}
+
+textarea::placeholder, input[type="text"]::placeholder {
+    font-size: 12pt;
+    color: #17f700;
+    font-family: "Nanum Gothic Coding", monospace;
+}
+
+textarea::placeholder {
+    font-family: "Nanum Gothic Coding", monospace;
+}
+
+textarea:hover, input[type="text"]:hover {
+    background-color: #202020;
+    transition: all 0.35s ease;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttons button,
+.buttons label {
+    font-family: "Nanum Gothic Coding", monospace;
+    font-weight: 400;
+    width: 100%;
+    margin-top: 9px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #17f700;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.35s ease;
+}
+
+.button {
+    padding: 1.5px;
+}
+
+.buttons button:hover, .buttons .button:hover {
+    color: white;
+    background-color: #17f700;
+}
+
+.imgArea {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.imgArea canvas {
+    width: auto;
+    height: 99.6%;
+}
+
+#imageInput {
+    visibility: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+}
+
+.return-home {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.homeBtn {
+    font-family: "Nanum Gothic Coding", monospace;
+    font-weight: 400;
+    font-size: 18px;
+    color: #17f700;
+    background-color: black;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.35s ease;
+}
+
+.homeBtn:hover {
+    color: white;
+    background-color: #17f700;
+}
+
