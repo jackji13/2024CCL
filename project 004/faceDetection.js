@@ -5,11 +5,11 @@ let currentImageIndex = 0;
 let images = [];
 
 async function loadModels() {
-    await faceapi.nets.ssdMobilenetv1.loadFromUri('project 004/models');
-    await faceapi.nets.ageGenderNet.loadFromUri('project 004/models');
-    await faceapi.nets.faceLandmark68Net.loadFromUri('project 004/models');
-    await faceapi.nets.faceRecognitionNet.loadFromUri('project 004/models');
-    await faceapi.nets.faceExpressionNet.loadFromUri('project 004/models');
+    await faceapi.nets.ssdMobilenetv1.loadFromUri('project%20004/models');
+    await faceapi.nets.ageGenderNet.loadFromUri('project%20004/models');
+    await faceapi.nets.faceLandmark68Net.loadFromUri('project%20004/models');
+    await faceapi.nets.faceRecognitionNet.loadFromUri('project%20004/models');
+    await faceapi.nets.faceExpressionNet.loadFromUri('project%20004/models');
     console.log('Face-api models loaded.');
 }
 
