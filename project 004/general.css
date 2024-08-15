@@ -17,6 +17,19 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 70%;
+  animation: container 1s ease;
+}
+
+@keyframes container {
+  0% {
+    transform: translateY(-250px);
+      opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+      opacity: 1;
+  }
 }
 
 .image-container {
@@ -24,7 +37,6 @@ body {
   height: 600px;
   overflow: hidden;
   position: relative;
-
 }
 
 .text-container {
@@ -39,14 +51,6 @@ body {
   background-color: #000000;
   overflow-y: auto;
   position: relative; /* Updated to provide a positioning context for absolute children */
-}
-
-@keyframes text-containerMove {
-  0% { width: 0px; 
-  }
-
-  100% { width: 600px; 
-  }
 }
 
 #canvasOverlay {
@@ -72,11 +76,24 @@ body {
   cursor: pointer;
   text-align: center;
   transition: all 0.35s ease;
+  animation: changeBtn 1s ease;
 }
 
 .changeBtn:hover {
   color: white;
   background-color: #17f700;
+}
+
+@keyframes changeBtn {
+  0% {
+    transform: translateX(250px);
+      opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+      opacity: 1;
+  }
 }
 
 .downloadBtn {
@@ -114,9 +131,22 @@ body {
   text-align: center;
   text-decoration: none;
   transition: all 0.35s ease;
+  animation: homeBtn 1s ease;
 }
 
 .homeBtn:hover {
   color: white;
   background-color: #17f700;
+}
+
+@keyframes homeBtn {
+  0% {
+    transform: translateX(-250px);
+      opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+      opacity: 1;
+  }
 }
