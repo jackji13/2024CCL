@@ -1,10 +1,15 @@
 body, html {
-    height: 100%;
+    overflow-x: hidden;
+}
+
+.imageContainer {
+    height: 100vh;
+    width: 100vw;
+    top: 0vh;
+    left: 0vw;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
 }
 
 .image-container {
@@ -31,13 +36,60 @@ body, html {
     filter: grayscale(0%);
 }
 
-.text {
+.arrow {
+    padding-top: 20px;
+    color: #17f700;
+    position: absolute;
+    top: 94vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    rotate: 90deg;
+    font-family: "cofo-peshka-variable", sans-serif;
+    font-variation-settings: "slnt" 0, "wght" 1900, "wdth" 100;
+    font-size: 5vh;
+    z-index: 3;
+    cursor: pointer;
+    animation: arrowMove 1.7s 1s infinite ease both, arrowEnter 1s ease;
+}
+
+@keyframes arrowMove {
+    0% {
+        transform: translateX(0px) scaleY(2);
+    }
+
+    50% {
+        transform: translateX(-20px) scaleY(2);
+    }
+
+    100% {
+        transform: translateX(0px) scaleY(2);
+    }
+}
+
+@keyframes arrowEnter {
+    0% {
+        transform: translateX(-80px) scaleY(2);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px) scaleY(2);
+        opacity: 1;
+    }
+}
+
+.textContainer {
+    height: 100vh;
+    width: 100vw;
+    top: 100vh;
+    left: 0vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    height: 100vh;
-    top: 1000px;
+}
+
+.text {
+    width: 63vw;
     font-family: "Nanum Gothic Coding", monospace;
     font-weight: 400;
     font-size: 14pt;

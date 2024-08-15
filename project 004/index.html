@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOXER</title>
     <link rel="stylesheet" href="homePage.css">
+    <link rel="stylesheet" href="scrollbar.css">
     <link rel="icon" href="assets/icon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.typekit.net/tep7wrm.css">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
     <script defer src="face-api.min.js"></script>
     <script defer src="homePage.js"></script>
@@ -16,16 +18,50 @@
 </head>
 
 <body>
+    
+    <div class="imageContainer">
+        <a href="p1.html" class="image-link">
+            <div id="image-gallery" class="image-container">
+                <img src="" id="displayedImage" alt="Displayed Image">
+            </div>
+        </a>
+    </div>
 
-    <a href="p1.html" class="image-link">
-        <div id="image-gallery" class="image-container">
-            <img src="" id="displayedImage" alt="Displayed Image">
-        </div>
-    </a>
+    <div class="arrow">></div>
+        
+    <div class="textContainer">
+        <div class="text">
+            <p>
+                A cautionary web art project that probes the vulnerabilities of personal data exposure in this AI-driven era. 
+                Leveraging face-api.js and images from Pexels, DOXER crafts an interactive scenario where AI algorithms simulate 
+                the doxxing process, blending real-time facial detection with artificially generated personal data. 
+                This exhibition starkly illustrates how effortlessly digital identities can be created and manipulated, 
+                urging viewers to confront the realities of data safety in a world dominated by artificial intelligence. 
+                Through visual narratives, DOXER invites a critical examination of the thin line between authenticity and fabrication, 
+                encouraging a broader dialogue on privacy and the ethical challenges of AI technologies in shaping our digital lives.
+            </p>
+        </div>  
+    </div>
 
-    <div class="text">
-        <p>DOXER - A cautionary platform that delves into the implications of personal data exposure in the digital era. Inspired by vibrant discussions on Hacker News about avatar generation and fake information for scams, Doxer transforms personal data such as names, ages, and addresses into engaging visual narratives. This website artfully raises awareness about the ease with which our digital identities can be leaked and misused, urging a reflection on data privacy. Through interactive displays and stark visualizations, Doxer not only highlights the vulnerabilities inherent in digital interactions but also encourages more guarded and informed behaviors online, making it a compelling resource for those concerned with safeguarding their personal information.</p>
-    </div>  
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    
+            setTimeout(() => {
+                window.addEventListener('scroll', handleScroll);
+                handleScroll(); // To check the position initially
+            }, 1500); // 1000 milliseconds = 1 second
+    
+            const arrow = document.querySelector('.arrow');
+            
+            arrow.addEventListener('click', function() {
+                console.log('Arrow clicked');
+                window.scrollBy({
+                    top: window.innerHeight,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        </script>
 
 </body>
 

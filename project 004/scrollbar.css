@@ -1,0 +1,38 @@
+/* Default dark mode scrollbars */
+::-webkit-scrollbar {
+    width: 5px;  /* Width of the scrollbar */
+    height: 5px; /* Height of the scrollbar (for horizontal scrollbar) */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #696969;  /* Scrollbar color */
+    border-radius: 10px;  /* Rounded edges */
+    border: 2px solid transparent;  /* Optional: adds some space around the thumb */
+    background-clip: padding-box;  /* Optional: fixes a padding issue */
+}
+
+::-webkit-scrollbar-track {
+    background: #00000000;  /* Background of the scrollbar track */
+    border-radius: 10px;  /* Rounded edges for the track */
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin;  /* "auto" or "thin" */
+    scrollbar-color: #696969 #00000000;  /* Scrollbar thumb and track color */
+}
+
+/* Custom scrollbar for all other elements */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #696969 #00000000;
+}
+
+/* For IE and Edge (optional) */
+body {
+    -ms-overflow-style: none;  /* Hides the default scrollbar in IE/Edge */
+}
+
+body::-webkit-scrollbar {
+    display: none;  /* Hides the default scrollbar in WebKit browsers */
+}
