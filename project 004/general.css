@@ -50,7 +50,7 @@ body {
   height: 600px;
   background-color: #000000;
   overflow-y: auto;
-  position: relative; /* Updated to provide a positioning context for absolute children */
+  position: relative;
 }
 
 #canvasOverlay {

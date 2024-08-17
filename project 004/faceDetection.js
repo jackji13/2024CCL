@@ -30,19 +30,18 @@ async function loadModels() {
     animateText(pElement, 'System override: Face detection protocols online\nImage data streams decrypted\nInitiate doxxing sequence\n \nStart doxxing!');
 }
 
-let recentlyUsedIndices = [];  // Array to hold the indices of recently shown images
+let recentlyUsedIndices = [];
 
 async function loadRandomImage() {
-    if (images.length > 5) {  // Ensure there are enough images to avoid repetition
+    if (images.length > 5) {
         let randomIndex;
         do {
             randomIndex = Math.floor(Math.random() * images.length);
-        } while (recentlyUsedIndices.includes(randomIndex));  // Ensure the new index hasn't been used recently
+        } while (recentlyUsedIndices.includes(randomIndex));
         
-        // Update the list of recently used indices
         recentlyUsedIndices.push(randomIndex);
-        if (recentlyUsedIndices.length > 5) {  // Keep the list limited to the last 5 indices
-            recentlyUsedIndices.shift();  // Remove the oldest index to maintain the limit
+        if (recentlyUsedIndices.length > 5) {
+            recentlyUsedIndices.shift();
         }
         
         currentImageIndex = randomIndex;
@@ -52,14 +51,13 @@ async function loadRandomImage() {
     }
 }
 
-
 async function displayAndDetectFace() {
-    // Clear the text container at the start of each image display
+
     const pElement = document.querySelector('.text-container p');
     const downloadBtn = document.querySelector('.downloadBtn');
     
-    pElement.innerHTML = '';  // Reset the content
-    downloadBtn.style.display = 'none'; // Ensure the button is hidden each time
+    pElement.innerHTML = '';
+    downloadBtn.style.display = 'none';
 
     if (images.length > 0 && currentImageIndex < images.length) {
         const imgElement = new Image();
@@ -78,7 +76,7 @@ async function displayAndDetectFace() {
             console.log(`Image drawn on canvas: ${imgElement.src}`);
 
             await detectFace(canvas);
-            downloadBtn.style.display = 'block'; // Show the button after an image is processed
+            downloadBtn.style.display = 'block';
         };
 
         const imageUrl = images[currentImageIndex].src.large;
@@ -88,28 +86,26 @@ async function displayAndDetectFace() {
     }
 }
 
-
-
 function getRandomChar() {
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()+=;:<>?/|";
     return chars[Math.floor(Math.random() * chars.length)];
 }
 
 function animateText(pElement, targetText) {
-    const lines = targetText.split('\n'); // Split the full text into lines
-    pElement.innerHTML = ''; // Clear existing content
+    const lines = targetText.split('\n');
+    pElement.innerHTML = '';
 
     lines.forEach((line) => {
         if (line.trim() === '') {
-            pElement.appendChild(document.createElement('br')); // Preserve line breaks for empty lines
+            pElement.appendChild(document.createElement('br'));
         } else {
-            const span = document.createElement('span'); // Create a span for each line
-            span.textContent = line; // Set text content to the line
-            pElement.appendChild(span); // Append the span to the paragraph element
-            pElement.appendChild(document.createElement('br')); // Add a line break after each span
+            const span = document.createElement('span');
+            span.textContent = line;
+            pElement.appendChild(span);
+            pElement.appendChild(document.createElement('br'));
 
-            const duration = 1000; // Total duration of the animation in milliseconds
-            const frameRate = 40; // Frames per second
+            const duration = 1000;
+            const frameRate = 40;
             const totalFrames = duration / (1000 / frameRate);
             let frame = 0;
 
@@ -128,17 +124,17 @@ function animateText(pElement, targetText) {
                     }
                 }
 
-                span.textContent = displayText; // Update the text of the span
+                span.textContent = displayText;
                 frame++;
 
                 if (frame <= totalFrames) {
                     setTimeout(frameUpdate, 1000 / frameRate);
                 } else {
-                    span.textContent = line; // Ensure final text is correct after animation
+                    span.textContent = line;
                 }
             }
 
-            frameUpdate(); // Start the animation for each line immediately
+            frameUpdate();
         }
     });
 }
@@ -151,7 +147,7 @@ async function detectFace(canvas) {
         .withAgeAndGender();
 
     const resizedDetections = faceapi.resizeResults(detections, { width: canvas.width, height: canvas.height });
-    let textContent = `Detected Faces: ${resizedDetections.length}\n`;  // Include the count of detected faces
+    let textContent = `Detected Faces: ${resizedDetections.length}\n`;
 
     for (const result of resizedDetections) {
         const { gender, age, expressions } = result;
@@ -182,24 +178,19 @@ async function detectFace(canvas) {
 
 document.getElementById('downloadBtn').addEventListener('click', function() {
     const textContainer = document.querySelector('.text-container p');
-    const textToDownload = textContainer.innerText; // Use innerText to preserve line breaks
+    const textToDownload = textContainer.innerText;
 
-    // Create a Blob with the text content
     const blob = new Blob([textToDownload], { type: 'text/plain' });
     const href = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = href;
-    link.download = "doxxing-info.txt"; // Name of the file to be downloaded
+    link.download = "doxxing-info.txt";
     document.body.appendChild(link);
     link.click();
 
-    // Clean up the URL and remove the temporary link
     document.body.removeChild(link);
     URL.revokeObjectURL(href);
 });
-
-
-
 
 async function fetchRandomUserData() {
     try {
